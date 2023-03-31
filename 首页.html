@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>香水主题</title>
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<style type="text/css">
+.flash { width:100%; height:530px; position:relative;border-bottom:1px solid #edeeef;}
+.flash .con li { width:100%; height:530px; position:absolute; top:0; left:0;}
+.flash .but { width:100px; position:absolute; top:500px; left:48.5%; z-index:222;}
+.flash .but li { width:13px; height:13px; display:inline-block; background:url(images/dot.png) -13px 0 no-repeat; float:left; margin-right:5px; }
+.flash .but li.current { background:url(images/dot.png) 0 0 no-repeat; margin-right:5px;}
+a:hover {
+	color: #800F0F;
+}
+</style>
+</head>
+<body>
+    <div class="tip">
+    	<div class="logo">
+        	<img src="images/logo.png" width="60" height="60"/>
+        </div>
+        <div class="search">
+			<dl>
+				<dt><input type="text" class="txt_search" placeholder="输入关键词进行查询"/></dt>
+				<dd><input name="搜索" type="button" class="btn_search" value="搜索" /> </dd>
+			</dl>
+		</div>
+    </div>
+    <div class="menu">
+		<div class="m_menu">
+			<ul>
+            	<li><a href="首页.html" target="_parent">首页</a></li>
+            	<li><a href="香奈儿.html" target="_parent">香奈儿</a></li>
+            	<li><a href="祖玛珑.html" target="_parent">祖玛珑</a></li>
+            	<li><a href="登录.html" target="_parent">登录注册</a></li>
+			</ul>
+		</div>
+    </div>
+    <div class="flash">
+    	<ul class="con">
+        	<li style="background:url(images/首页1.jpg) center no-repeat; z-index:11;"></li>
+            <li style="background:url(images/首页2.jpg) center no-repeat;"></li>
+            <li style="background:url(images/首页3.jpg) center no-repeat;"></li>
+        </ul>
+        <!--按钮开始-->
+        <ul class="but">
+        	<li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!--按钮结束-->
+    </div>
+<script type="text/javascript">
+	var index=0;
+	var playCount=null;
+	
+	$(".but li").hover(function(){
+		clearInterval(playCount);
+		$(this).addClass("current").siblings().removeClass("current");
+		index = $(this).index();
+		$(".con li").eq(index).fadeIn().siblings().fadeOut();	
+	}).mouseout(function(){
+		auto_play();
+	});
+	function auto_play(){
+		playCount=setInterval(function(){
+			index++;
+			if(index > 3){index=0;}
+			$(".but li").eq(index).addClass("current").siblings().removeClass("current");	
+			$(".con li").eq(index).fadeIn().siblings().fadeOut();
+		},3000);
+		
+	};
+	
+	auto_play();
+	
+</script>
+	
+	<div class="main">
+    	<div class="jianj">
+			<div class="mi">
+				<div class="mi_title" >香水历史<span class="eng">History of perfume</span></div> 
+        	</div>
+            <div class="j_main">
+            	<div class="j_txt">
+                <p>香水迷惑人类的历史，在欧洲也只不过近100年的时间，但香水却以它的独特魅力见证着年代的起落兴衰，当我们回顾这段历史时，不禁再次徘徊于现实与虚幻之间。</p>
+                <p>香水最早起源于埃及，印度，罗马，希腊，波斯等文明古国。通过记载发现，香水最早是用来祭拜神灵用的，它代表的是神圣不可侵犯，故普通人不能使用。从人们学会使用火种开始，他们认为焚烧物体散发的烟雾是神灵和大地的联 系香水的英文词是“perfume”起源于拉丁文“perfumum”意思是“穿透烟雾”，即使到现在，焚香也是在很多宗教仪式中扮演者重要的角色，他们认为通天的烟雾是跟神灵沟通的方式。</p>
+				<p>古代各国的香水起源都有所不同，国家的风俗奠定了香水的基础，但有一点可以肯定那就是对“香”的美好追求。从古至今经历了几番波折人们对香的追求仍然充满激情。</p>
+				</div>
+                <div class="j_img">
+                	<img src="images/首页4.jpg" width="325" height="223"/>
+                </div>
+            </div>
+        </div>
+    	<div class="mi">
+        	<div class="mi_title">那些经典的香水<span class="eng">Those Classic Perfumes</span></div> 
+            <div class="xin">
+              <div class="x_con">
+                	<dl class="pad_13">
+						<dt>
+							<a href="about.html" target="_parent"><img src="images/香奈儿5号.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>香奈儿5号</dd>
+                    </dl>
+                    <dl class="pad_13">
+						<dt>
+							<a href="about.html" target="_parent"><img src="images/兰蔻奇迹香水.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>兰蔻奇迹之水</dd>
+                    </dl>
+                    <dl class="pad_13">
+						<dt>
+							<a href="about.html" target="_parent"><img src="images/雅诗兰黛欢沁香水.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>雅思兰黛欢沁香水</dd>
+                    </dl>
+                    <dl>
+						<dt>
+							<a href="about.html" target="_parent"><img src="images/雅顿白钻.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>雅顿白钻香水</dd>
+                    </dl>
+                </div>
+                <div class="x_con">
+                	<dl class="pad_13">
+						<dt>
+							<a href="#" target="_parent"><img src="images/香奈儿魅力女士.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>香奈儿魅力女士</dd>
+                  </dl>
+                    <dl class="pad_13">
+						<dt>
+							<a href="#" target="_parent"><img src="images/圣罗兰“黑鸦片”.jpg" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>圣罗兰"黑鸦片"</dd>
+                    </dl>
+                    <dl class="pad_13">
+						<dt>
+							<a href="#" target="_parent"><img src="images/古驰“嫉妒我”.jpg" width="290" height="230" alt=""/></a>
+                      </dt>
+                        <dd>古驰"嫉妒我"</dd>
+                  </dl>
+                    <dl>
+						<dt>
+							<a href="#" target="_parent"><img src="images/克莱恩1号.png" width="290" height="230" alt=""/></a>
+                        </dt>
+                        <dd>克莱恩1号</dd>
+                    </dl>
+              </div>
+            </div>
+    	</div>
+        <div class="jy"></div>     
+    </div>
+    <div class="footer">
+    	<div class="foo_main">© 2022 Powered By 杨梦怡202208201216</div>
+    </div>
+</body>
+</html>
